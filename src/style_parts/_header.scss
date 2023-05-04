@@ -1,0 +1,70 @@
+#page-header{
+
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+    font-size: 5vw;
+    background-position: center top;
+    background-size: cover;
+
+    h1,h2, .down{
+
+        text-shadow:  3px 4px 2px $background-color;
+    }
+    .down{
+
+        position: relative;
+        font-size: 6vw;
+        animation: jump 3s infinite ease-in-out;
+    }
+    .btn-header{
+        font-size: 1.2rem;
+        padding: 15px;
+        background-color: $color-magenta;
+        border: 2px solid $color-yellow;
+        border-radius: 5px;
+        color: $primary-color;
+        &:hover{
+            color: $color-yellow;
+            background-color: $color-dark
+        }
+    }
+
+   
+   
+}
+@media (min-width: 992px){
+    #page-header{
+        .btn-header{
+            font-size: 1.8rem;
+            padding: 20px;
+
+
+        }
+        .page-title{
+            margin-bottom: 0px;
+        }
+    }
+    
+}
+
+.home{
+    #page-header{
+        height: 100vh;
+    }
+}
+@keyframes jump{
+    0%{
+         top:0;
+    }
+    50%{
+         top: 20px;
+    }
+    100%{
+         top:0;
+    }
+}

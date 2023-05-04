@@ -1,0 +1,100 @@
+.sidebar{
+    margin-bottom: 5rem;
+    .widget{
+        background-color: $color-magenta;
+        padding: 1rem;
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        ul{
+            padding-inline-start: 0;
+            li{
+                list-style-type: none;
+                a{
+                    &:hover{
+                        color: $color-yellow;
+                    }
+                }
+            }
+        }
+    }
+    .wodget-title{
+        color: $color-magenta;
+        margin-top: 0;
+        padding: 5px;
+        background-color: $color-yellow;
+        font-size: 1.2em;
+    }
+}
+.nav-links{
+    padding: 3rem 0;
+}
+.post-meta{
+    text-align: center;
+    padding: 2% 0;
+    font-size: 1.3rem;
+    .meta{
+        padding-right: 1%;
+    }
+}
+.post-navigation::after,
+.nav-links::after,
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+@mixin widgetname($widgetname){
+    content: $widgetname;
+    display: block;
+    color: $color-yellow;
+    font-size: 2rem;
+}
+.sidebar{
+    .widget_archive{
+        &::before{
+            @include widgetname('Archive');
+        }
+    }
+    .widget_recent_entries{
+        &::before{
+            @include widgetname('Blogbeiträge');
+        }
+    }
+}
+@media (min-width: 992px){
+    .main-content.has-sidebar{
+        float: left;
+        width: calc(100% - 330px);
+    }
+    main.has-sidebar{
+        border-right: 5px solid $color-yellow;
+        padding-right: 3%;
+    }
+    .sidebar{
+        width:300px;
+        float: right;
+        padding-top: 5rem;
+        .widget{
+            font-size: 1.3rem;
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border: 15px solid transparent;
+                border-right: 15px solid $color-yellow;
+                position: absolute;
+                left: -30px;
+                top: 25px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+div.wpforms-container{
+    .wpforms-form{
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        textarea,
+        select{
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            padding: 0 0.5em;
+            background-color: rgba(225,225,225,.3);
+            border: none;
+            border-top: 3px solid $color-yellow;
+            &:focus{
+                border-top: 3px solid $color-magenta;
+                background-color: rgba(238,66,102,.3);
+
+            }
+            
+        }
+        button[type=submit]{
+            border-radius: 0;
+            background-color: $color-yellow;
+            color: $color-dark;
+            transition: all 300ms ease;
+            &:hover {
+                background-color: $color-green;
+                color: $primary-color;
+                border-radius: 10px;
+            }
+        }
+
+
+    }
+}

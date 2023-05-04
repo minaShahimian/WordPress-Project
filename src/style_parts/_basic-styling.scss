@@ -1,0 +1,97 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.375;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $background-color;
+    color: $primary-color;
+    font-family: $standard-font;
+    font-weight: 400;
+    font-size: 17px;
+    //padding-top: 60px;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: $standard-font;
+    color: $primary-color;
+    font-weight: 700;
+}
+h1 {
+    font-size: 1.7em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 1.2em 0 0.83em;
+}
+
+h3 {
+    font-size: 1.25em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1.25em;
+    margin: 1em 0 0.5em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+section {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+a {
+    text-decoration: none;
+    color: $color-violet;
+    transition: color 200ms ease;
+    &:hover{
+        color: $color-magenta;
+    }
+}
+.wp-block-button a {
+    border-radius: 0;
+    background-color: $color-yellow;
+    color: $color-dark;
+    transition: all 300ms ease;
+    &:hover{
+        background-color: $color-green;
+        color: $primary-color;
+        border-radius: 10px;
+    }
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    padding: 0 0.5em;
+    background-color: rgba(225,225,225,.3);
+    border: none;
+    border-top: 3px solid $color-yellow;
+    &:focus{
+        border-top: 3px solid $color-magenta;
+        background-color: rgba(238,66,102,.3);
+
+    }
+    
+}
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
